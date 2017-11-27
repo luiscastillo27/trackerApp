@@ -1,0 +1,62 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+img{
+	display: block;
+	width: 100%;
+}
+#mapa {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.scroll {
+  height: 100%;
+}
+.formLogin{
+	display: block;
+	width: 65%;
+	margin: 27px auto;
+}
+.formLogin img{
+	display: block;
+	width: 127px;
+	height: 127px;
+	margin: 0px auto;
+	margin-bottom: 27px;
+}
+.fondoApp{
+	background: url('../img/fondo1.jpg') !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+}
+.input-top{
+	border-radius: 7px 7px 0px 0px;
+}
+.input-bottom{
+	border-radius: 0px 0px 7px 7px;
+}
+
+
+
+.scroll-content{
+	background: #bbd3fe;
+}
+.item-content{
+	background: #bbd3fe !important;
+}
+.icon-accessory{
+	color: #3A70F9 !important;
+}
+.ion-list{
+	border: none !important;
+	border-bottom: solid 1px #3A70F9 !important;
+	border-top: solid 1px #3A70F9 !important;
+}
+.ion-ios-location-outline,
+.ion-document,
+.ion-ios-gear-outline{
+	color: #fff !important;
+}

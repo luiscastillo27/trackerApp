@@ -1,0 +1,8 @@
+{
+  "name": "Tracker",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "ionic-team/ionic-bower#1.3.4",
+    "ngCordova": "^0.1.27-alpha"
+  }
+}

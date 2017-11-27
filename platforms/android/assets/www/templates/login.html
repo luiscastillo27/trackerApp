@@ -1,0 +1,23 @@
+<ion-view hide-nav-bar="true">
+    <ion-content scroll="false" class="fondoApp">
+
+    
+        <div class="list formLogin">
+            <form role="form" name="formLogin" id="formLogin">
+                <img src="img/usuario.png">
+                <label class="item item-input input-top"> 
+                    <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" -->
+                    <input type="text" placeholder="Usuario" ng-model="verifi.email" minlength="3" required>
+                </label>
+                <label class="item item-input input-bottom">
+                    <input type="password" placeholder="Contraseña" ng-model="verifi.password" minlength="8" required>
+                </label>
+                <button ng-click="btnVerificar();" ng-disabled="formLogin.$invalid"  class="button button-block button-positive">
+                    Ingresar
+                </button>
+            </form>
+        </div>
+        
+
+    </ion-content>
+</ion-view>
