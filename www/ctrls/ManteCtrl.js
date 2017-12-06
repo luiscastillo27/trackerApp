@@ -14,7 +14,7 @@ var app = angular.module('ManteCtrl', []);
                 method: 'get',
                 url: 'mantenimiento/listar/' + id,
                 response: function (resp) {
-      
+                    
                     if(resp.mensage == "Listando los mantenimientos del vehiculo"){
                         $scope.mantes = resp.data;
                     }   

@@ -15,13 +15,14 @@ var app = angular.module('ManteDetallesCtrl', []);
                 url: 'mantenimiento/obtener/' + id,
                 response: function (resp) {
                    
+
                     if(resp.mensage == "Peticion hecha correctamente"){
-                        console.log(resp);
+                      
                         $scope.latitud = resp.data[0]["latitud"];
                         $scope.logitud = resp.data[0]["logitud"];
                         $scope.titulo = resp.data[0]["modelo"];
                         $scope.destino = { lat: $scope.latitud, lng: $scope.logitud }
-
+                        
                         $cordovaGeolocation.getCurrentPosition(options).then(function(position){
 
                             $scope.coordenas = { lat: position.coords.latitude, lng: position.coords.longitude }
@@ -34,11 +35,11 @@ var app = angular.module('ManteDetallesCtrl', []);
 
                             $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-                            var marker = new google.maps.Marker({
-                                position: latLng,
-                                map: $scope.map,
-                                zoom: 4
-                            });
+                            // var marker = new google.maps.Marker({
+                            //     position: latLng,
+                            //     map: $scope.map,
+                            //     zoom: 4
+                            // });
 
                             //OBJETO  DE CONFIGURACION DR
                             var configDr = {

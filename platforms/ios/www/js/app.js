@@ -1,7 +1,6 @@
 (function(){
 
-    var app = angular.module('tracker', ['ionic', 'ngCordova',
-    'tracker.services', 'tracker.rutas', 'tracker.mantes', 'AjustesCtrl', 'LoginCtrl', 
+    var app = angular.module('tracker', ['ionic', 'ngCordova', 'tracker.services', 'AjustesCtrl', 'LoginCtrl', 
     'ManteCtrl', 'ManteDetallesCtrl', 'RutasCtrl', 'RutasDetallesCtrl'])
 
     app.run(function($ionicPlatform) {

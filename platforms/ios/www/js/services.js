@@ -2,6 +2,8 @@
 
     var app = angular.module('tracker.services', []);
 
+    var urlBase = 'http://192.168.137.155:2715/';
+
     app.factory('auth', ['$location', function ($location) {
         var auth = {
             setToken: function (token) {
@@ -51,7 +53,7 @@
 
             var http_config = {
                 method: config.method,
-                url: 'http://192.168.0.10:2715/' + config.url,
+                url: urlBase + config.url,
                 data: typeof (config.data) === 'undefined' ? null : config.data,
                 headers: headers
             };

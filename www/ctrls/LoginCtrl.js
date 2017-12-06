@@ -58,8 +58,17 @@ var app = angular.module('LoginCtrl', []);
                                         email: undefined,
                                         password: undefined
                                     };
+                                    navigator.notification.confirm("El usuario y/o contraseña son invalidos", function(){
+                                    }, "Error", ["Aceptar"]);
+                                }
+
+                                if(resp.tipoUser = 'Administrador'){
+                                    navigator.notification.confirm("El usuario no es un chofer, no puede iniciar sesion via applicación", function(){
+                                    }, "Error", ["Aceptar"]);
                                 }
                                 
+                        
+
                             },
                             error: function (resp) {
                                 navigator.notification.confirm(resp, function(){

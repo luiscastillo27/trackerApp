@@ -2,7 +2,7 @@
 
 var app = angular.module('ManteCtrl', []);
 
-    app.controller('ManteCtrl', ['$scope', 'restApi', 'locStr', '$state', 'auth', '$ionicPopup' , 'Mantes' ,function ($scope, restApi, locStr, $state, auth, $ionicPopup, Mantes) {
+    app.controller('ManteCtrl', ['$scope', 'restApi', 'locStr', '$state', 'auth', '$ionicPopup', function ($scope, restApi, locStr, $state, auth, $ionicPopup) {
 
         auth.redirectIfNotExists();
         var id = auth.getUserData().idUsuario;
@@ -14,7 +14,7 @@ var app = angular.module('ManteCtrl', []);
                 method: 'get',
                 url: 'mantenimiento/listar/' + id,
                 response: function (resp) {
-      
+                    
                     if(resp.mensage == "Listando los mantenimientos del vehiculo"){
                         $scope.mantes = resp.data;
                     }   

@@ -15,13 +15,14 @@ var app = angular.module('ManteDetallesCtrl', []);
                 url: 'mantenimiento/obtener/' + id,
                 response: function (resp) {
                    
+
                     if(resp.mensage == "Peticion hecha correctamente"){
                       
                         $scope.latitud = resp.data[0]["latitud"];
                         $scope.logitud = resp.data[0]["logitud"];
                         $scope.titulo = resp.data[0]["modelo"];
                         $scope.destino = { lat: $scope.latitud, lng: $scope.logitud }
-
+                        
                         $cordovaGeolocation.getCurrentPosition(options).then(function(position){
 
                             $scope.coordenas = { lat: position.coords.latitude, lng: position.coords.longitude }

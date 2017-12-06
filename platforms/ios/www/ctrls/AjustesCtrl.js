@@ -12,7 +12,7 @@
                     case 1:
                         // navigator.notification.confirm("Aceptar", function(){
                         // }, "Error", ["Aceptar"]);
-                        //auth.logout();
+                        auth.logout();
                     break;
                     case 2:
                         // navigator.notification.confirm("No cerrar", function(){

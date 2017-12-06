@@ -14,7 +14,7 @@ var app = angular.module('RutasCtrl', []);
                 method: 'get',
                 url: 'rutas/listar/' + id,
                 response: function (resp) {
-      
+                    
                     if(resp.mensage == "Listando las rutas del empleado"){
                         $scope.rutas = resp.data;
                     }   

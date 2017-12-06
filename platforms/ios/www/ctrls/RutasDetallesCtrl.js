@@ -15,6 +15,7 @@ var app = angular.module('RutasDetallesCtrl', []);
                 url: 'rutas/obtener/' + id,
                 response: function (resp) {
                    
+                    console.log(resp);
                     if(resp.mensage == "Peticion hecha correctamente"){
                         $scope.latitud = resp.data[0]["latitud"];
                         $scope.logitud = resp.data[0]["logitud"];
