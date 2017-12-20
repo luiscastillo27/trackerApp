@@ -2,7 +2,7 @@
 
     var app = angular.module('tracker.services', []);
 
-    var urlBase = 'http://192.168.137.155:2715/';
+    var urlBase = 'http://localhost:2715/';
 
     app.factory('auth', ['$location', function ($location) {
         var auth = {
